@@ -33,7 +33,7 @@ const Home: NextPage = () => {
 
       <div className={styles.featureContainer}>
         <div className='header'>Specially for you {"Kristian"}.</div>
-        <div className='descriptions'>ⓘ Because: You browsed men's product 5 out of 10 times.</div>
+        <div className='descriptions'>ⓘ Because: You browsed men`s product 5 out of 10 times.</div>
         <img></img>
       </div>
 
