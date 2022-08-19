@@ -30,6 +30,8 @@ const Home: NextPage = () => {
         <meta name="viewport" content="initial-scale=1.0" />
       </Head>
 
+      <a className={styles.back} href="#">Back to shop</a>
+
       <h1 className={styles.header}>Ecommerce.</h1>
 
       <div className={styles.menuItem}>Loyalty Centre</div>
