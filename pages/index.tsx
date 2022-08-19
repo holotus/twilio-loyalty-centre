@@ -3,6 +3,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Toggle from 'react-toggle'
 import React from 'react'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
+
 
 import styles from '../styles/Home.module.css'
 
@@ -34,7 +37,23 @@ const Home: NextPage = () => {
       <div className={styles.featureContainer}>
         <div className='header'>Specially for you {"Kristian"}.</div>
         <div className='descriptions'>ⓘ Because: You browsed men`s product 5 out of 10 times.</div>
-        <img></img>
+
+
+        <Swiper
+        slidesPerView={"auto"}
+        centeredSlides={true}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide><img src={'/p1.png'}></img></SwiperSlide>
+        <SwiperSlide><img src={'/p2.png'}></img></SwiperSlide>
+        <SwiperSlide><img src={'/p3.png'}></img></SwiperSlide>
+      </Swiper>
+
       </div>
 
       <div className={styles.featureContainer}>
