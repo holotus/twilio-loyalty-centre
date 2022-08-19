@@ -25,19 +25,79 @@
 
 .featureContainer {
     font-size: .875rem;
+    padding: 0px 0px 20px 0px;
 
 }
 
 
 .featureContainer [class~=header] {
-  font-size: .875rem;
+  font-size: 1rem;
   font-weight: 600;
+  padding: 20px 0px 0px 0px;
+  margin: 0px 30px 0px 30px;
+}
+
+.featureContainer [class~=headerLine] {
+  border-top: 1px solid #e2e8f0;
 }
 
 .featureContainer [class~=descriptions] {
   font-size: .875rem;
-  font-weight: normal;
+  font-weight: 300;
+  color: #999;
+  padding: 4px 30px 0px 30px;
+
 }
+
+.featureContainer [class~=toggleContainer] {
+  margin-top: 20px;
+}
+
+.featureContainer [class~=toggle] {
+  margin-left: 30px;
+}
+
+.featureContainer [class~=toggle]:hover [class~=react-toggle-track] {
+  background-color: #E1E3EA;
+}
+.featureContainer [class~=react-toggle] [class~=react-toggle-track] {
+  background-color: #E1E3EA;
+}
+.featureContainer [class~=react-toggle] [class~=react-toggle-thumb] {
+  border-color: #E1E3EA;
+}
+
+.featureContainer [class~=react-toggle--checked]:hover [class~=react-toggle-track] {
+  background-color: #0617C6;
+}
+.featureContainer [class~=react-toggle--checked] [class~=react-toggle-track] {
+  background-color: #030B5D;
+}
+.featureContainer [class~=react-toggle--checked] [class~=react-toggle-thumb] {
+  border-color: #030B5D;
+}
+
+.featureContainer [class~=label] {
+  margin-left: 10px;
+  line-height: 24px;
+  vertical-align: top;
+}
+
+.featureContainer [class~=value] {
+  margin-left: 90px;
+  font-size: .875rem;
+  font-weight: 300;
+  color: #999;
+}
+
+.featureContainer [class~=qr] {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
 /*
 .main {
   min-height: 100vh;
