@@ -122,7 +122,7 @@ const Home: NextPage = () => {
         <div className='toggleContainer'>           
           <Toggle className='toggle' id='channel-email' defaultChecked={checked} onChange={handleChecked} icons={false} />
           <label className='label' htmlFor='channel-email'>Email</label>
-          <div className='value'>{data["email "]}</div>
+          <div className='value'>{data["email"]}</div>
         </div>
 }
         <div className='toggleContainer'>
