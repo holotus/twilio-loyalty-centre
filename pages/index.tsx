@@ -117,7 +117,7 @@ const Home: NextPage = () => {
         <div className='header'>Join our newsletter</div>
         <div className='descriptions'>Subscribe to our newsletter to receive the latest news and products.</div>
 { isLoading? 
-          <p>Loading...</p>
+          <p>Loading... </p>
 :
         <div className='toggleContainer'>           
           <Toggle className='toggle' id='channel-email' defaultChecked={checked} onChange={handleChecked} icons={false} />
