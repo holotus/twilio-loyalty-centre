@@ -8,6 +8,14 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+
+  if(!process.env.SEGMENT_WOKRSPACE_ID){
+    res.status(400).send("Missing env var: SEGMENT_WOKRSPACE_ID");
+  }
+  if(!process.env.SEGMENT_WRITE_KEY){
+    res.status(400).send("Missing env var: SEGMENT_WRITE_KEY");
+  }
+  
     const { email } = req.query;
 
     var options = {
