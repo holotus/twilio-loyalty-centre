@@ -15,12 +15,12 @@ export default async function handler(
   if(!process.env.SEGMENT_WRITE_KEY){
     res.status(400).send("Missing env var: SEGMENT_WRITE_KEY");
   }
-  res.status(200).json( 
-    {
-      SEGMENT_WOKRSPACE_ID : process.env.SEGMENT_WOKRSPACE_ID,
-      SEGMENT_WRITE_KEY : process.env.SEGMENT_WRITE_KEY
-    }
-  );
+  // res.status(200).json( 
+  //   {
+  //     SEGMENT_WOKRSPACE_ID : process.env.SEGMENT_WOKRSPACE_ID,
+  //     SEGMENT_WRITE_KEY : process.env.SEGMENT_WRITE_KEY
+  //   }
+  // );
 
   
     const { email } = req.query;
