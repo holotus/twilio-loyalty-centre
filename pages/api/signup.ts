@@ -27,22 +27,22 @@ export default async function handler(
         email: req.body.email
     });
 
-    const confirmationURL = process.env.API_BASE_URL + '/confirm/?' + params;
+    const confirmationURL = process.env.API_BASE_URL + 'confirm/?' + params;
 
     const msg = {
         to: req.body.email,
         from: 'hello@twi-lio.com',
         subject: `Confirm your subscription to our newsletter`,
-        html: `Hello ${req.body.firstname},<br>Thank you for subscribing to our newsletter. Please complete and confirm your subscription by <a href="${confirmationURL}"> clicking here</a>.`
+        html: `Hello ${req.body.name},<br>Thank you for subscribing to our newsletter. Please complete and confirm your subscription by <a href="${confirmationURL}"> clicking here</a>.`
     }
 
     let traits = {
-        firstName: req.body.firstname,
-        lastName: req.body.lastname,
+        name: req.body.name,
+        // lastName: req.body.lastname,
         email: req.body.email,
-        phone: req.body.phone,
-        contactPreference: req.body.contactpreference,
-        referrer: req.body.referrer,
+        // phone: req.body.phone,
+        // contactPreference: req.body.contactpreference,
+        // referrer: req.body.referrer,
         confNum: confNum,
         createdAt: new Date()
     }
@@ -64,12 +64,12 @@ export default async function handler(
         });
     }
 
-    // await sgMail.send(msg);
+    await sgMail.send(msg);
     // res.render('message', { message: 'Thank you for signing up for our newsletter! Please complete the process by confirming the subscription in your email inbox.' });
 
     res.status(200).json({ 
         email: req.body.email,
-        isSignup: req.body.isSignup
+        // isSignup: req.body.isSignup
     })
 
 }

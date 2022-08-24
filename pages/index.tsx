@@ -47,8 +47,11 @@ const Home: NextPage = () => {
   const [isLoading, setLoading] = React.useState(false)
   const [checked, setChecked] = React.useState(false);
   function handleChecked(event: React.ChangeEvent<HTMLInputElement>){
-   
+    
     setChecked(event.target.checked)
+
+    if(!data || !event.target.checked)
+      return;
 
     setLoading(true)
 
@@ -57,10 +60,9 @@ const Home: NextPage = () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        email:'holotus@gmail.com',
-        isSignup: event.target.checked
-      }),
+      body: JSON.stringify(
+        data
+      ),
     })
     .then((res) => res.json())
     .then((data) => {
