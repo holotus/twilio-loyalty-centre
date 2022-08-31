@@ -33,7 +33,7 @@ export default async function handler(
         to: req.body.email,
         from: 'hello@twi-lio.com',
         subject: `Confirm your subscription to our newsletter`,
-        html: `Hello ${req.body.name},<br>Thank you for subscribing to our newsletter. Please complete and confirm your subscription by <a href="${confirmationURL}"> clicking here</a>.`
+        html: `Hello ${req.body.name},<br>Thank you for subscribing to our newsletter.`
     }
 
     let traits = {
